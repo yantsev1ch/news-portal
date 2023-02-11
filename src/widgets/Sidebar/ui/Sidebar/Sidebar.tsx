@@ -6,7 +6,7 @@ import { Button } from 'shared/ui/Button/Button';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
-    className?: string;
+  className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
@@ -18,7 +18,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
   return (
     <div
-      className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+      className={classNames(
+        cls.Sidebar,
+        { [cls.collapsed]: collapsed },
+        [className],
+      )}
     >
       <Button onClick={onToggle}>toggle</Button>
       <div className={cls.switchers}>
