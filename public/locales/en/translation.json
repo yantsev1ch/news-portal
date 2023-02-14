@@ -1,6 +1,6 @@
 {
-  "Тестовый пример": "Test example",
-  "Перевод": "Translate",
   "main": "Main page",
-  "page_not_found": "Page not found"
+  "page_not_found": "Page not found",
+  "error_boundary": "Something wrong",
+  "reload_page": "Reload page"
 }
