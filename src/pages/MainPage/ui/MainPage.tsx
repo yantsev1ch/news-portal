@@ -1,7 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-function MainPage() {
+interface MainPageProps {
+    className?: string;
+}
+
+function MainPage({ className }: MainPageProps) {
   const { t } = useTranslation();
 
   return (
