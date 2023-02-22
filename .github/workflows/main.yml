@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         node-version: [ 17.x ]
-        os: [ windows-2019 ]
+        os: [ ubuntu-latest ]
         runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
