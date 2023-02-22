@@ -6,11 +6,10 @@ on:
     branches: [ main ]
 jobs:
   pipeline:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 17.x ]
-        os: [ ubuntu-latest ]
-        runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
