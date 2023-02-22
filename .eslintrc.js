@@ -33,6 +33,7 @@ module.exports = {
       markupOnly: true,
       ignoreAttribute: ['data-testid', 'to'],
     }],
+    'linebreak-style': 0,
     'max-len': ['error', {
       ignoreComments: true,
       code: 120,
