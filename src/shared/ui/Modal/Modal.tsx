@@ -15,14 +15,19 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300;
 
-export const Modal = ({
-  className, children, isOpen, onClose,
-}: ModalProps) => {
+export const Modal = (props: ModalProps) => {
+  const {
+    className,
+    children,
+    isOpen,
+    onClose,
+  } = props;
+
   const [isClosing, setIsClosing] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
   const { theme } = useTheme();
 
-  const handleClose = useCallback(() => {
+  const closeHandler = useCallback(() => {
     if (onClose) {
       setIsClosing(true);
       timerRef.current = setTimeout(() => {
@@ -32,11 +37,12 @@ export const Modal = ({
     }
   }, [onClose]);
 
+  // Новые ссылки!!!
   const onKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') {
-      handleClose();
+      closeHandler();
     }
-  }, [handleClose]);
+  }, [closeHandler]);
 
   const onContentClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -46,6 +52,7 @@ export const Modal = ({
     if (isOpen) {
       window.addEventListener('keydown', onKeyDown);
     }
+
     return () => {
       clearTimeout(timerRef.current);
       window.removeEventListener('keydown', onKeyDown);
@@ -61,13 +68,15 @@ export const Modal = ({
   return (
     <Portal>
       <div className={classNames(cls.Modal, mods, [className])}>
-        <div className={cls.overlay} onClick={handleClose}>
-          <div className={cls.content} onClick={onContentClick}>
+        <div className={cls.overlay} onClick={closeHandler}>
+          <div
+            className={cls.content}
+            onClick={onContentClick}
+          >
             {children}
           </div>
         </div>
       </div>
     </Portal>
-
   );
 };
