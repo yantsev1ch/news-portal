@@ -3,7 +3,7 @@ import cls from './Text.module.scss';
 
 export enum TextTheme {
     PRIMARY = 'primary',
-    ERROR = 'error'
+    ERROR = 'error',
 }
 
 interface TextProps {
@@ -13,11 +13,18 @@ interface TextProps {
     theme?: TextTheme;
 }
 
-export const Text = ({
-  className, title, text, theme = TextTheme.PRIMARY,
-}: TextProps) => (
-  <div className={classNames(cls.Text, { [cls[theme]]: true }, [className])}>
-    {title && <p className={cls.title}>{title}</p>}
-    {text && <p className={cls.text}>{text}</p>}
-  </div>
-);
+export const Text = (props: TextProps) => {
+  const {
+    className,
+    text,
+    title,
+    theme = TextTheme.PRIMARY,
+  } = props;
+
+  return (
+    <div className={classNames(cls.Text, { [cls[theme]]: true }, [className])}>
+      {title && <p className={cls.title}>{title}</p>}
+      {text && <p className={cls.text}>{text}</p>}
+    </div>
+  );
+};

@@ -21,12 +21,11 @@ export const Navbar = ({ className }: NavbarProps) => {
     setIsAuthModal(false);
   }, []);
 
-  const onOpenModal = useCallback(() => {
+  const onShowModal = useCallback(() => {
     setIsAuthModal(true);
   }, []);
 
   const onLogout = useCallback(() => {
-    setIsAuthModal(false);
     dispatch(userActions.logout());
   }, [dispatch]);
 
@@ -49,11 +48,16 @@ export const Navbar = ({ className }: NavbarProps) => {
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}
-        onClick={onOpenModal}
+        onClick={onShowModal}
       >
         {t('Войти')}
       </Button>
-      <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+      {isAuthModal && (
+        <LoginModal
+          isOpen={isAuthModal}
+          onClose={onCloseModal}
+        />
+      )}
     </div>
   );
 };
