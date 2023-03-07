@@ -26,6 +26,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Andrey",
+    "lastname": "Yantsevich",
+    "age": 30,
+    "currency": "BYN",
+    "country": "Belarus",
+    "city": "Minsk",
+    "username": "admin",
+    "avatar": "https://pic.rutubelist.ru/user/81/e9/81e9db4ea6314c37c084a2015f583a39.jpg"
   }
 }
