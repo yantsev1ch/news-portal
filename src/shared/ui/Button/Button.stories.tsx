@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
@@ -36,6 +36,12 @@ export const Outline = Template.bind({});
 Outline.args = {
   children: 'Text',
   theme: ButtonTheme.OUTLINE,
+};
+
+export const OutlineRed = Template.bind({});
+OutlineRed.args = {
+  children: 'Text',
+  theme: ButtonTheme.OUTLINE_RED,
 };
 
 export const OutlineSizeL = Template.bind({});
