@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Avatar from 'shared/assets/tests/storybook.png';
 import { ProfileCard } from './ProfileCard';
 
 export default {
@@ -15,7 +14,7 @@ const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...
 
 export const Primary = Template.bind({});
 Primary.args = {
-  data: { avatar: Avatar },
+  data: { avatar: 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper.png' },
 };
 
 export const Error = Template.bind({});
@@ -31,5 +30,5 @@ Loading.args = {
 export const Readonly = Template.bind({});
 Readonly.args = {
   readonly: true,
-  data: { avatar: Avatar },
+  data: { avatar: 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper.png' },
 };
