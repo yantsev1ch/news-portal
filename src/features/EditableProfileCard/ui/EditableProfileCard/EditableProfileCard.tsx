@@ -1,7 +1,7 @@
 import { ProfileCard } from 'entities/Profile';
 import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
   getProfileError,
   getProfileForm,

@@ -109,13 +109,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
     }
   ],
   "profile": {

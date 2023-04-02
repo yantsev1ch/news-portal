@@ -74,7 +74,7 @@ const article: Article = {
 };
 
 describe('articleDetailsSlice.test', () => {
-  test('test article details service pending', () => {
+  test('test article details services pending', () => {
     const state: DeepPartial<ArticleDetailsSchema> = {
       isLoading: false,
     };
@@ -83,7 +83,7 @@ describe('articleDetailsSlice.test', () => {
     });
   });
 
-  test('test update profile service fulfilled', () => {
+  test('test update profile services fulfilled', () => {
     const state: DeepPartial<ArticleDetailsSchema> = {
       isLoading: true,
       data: undefined,
