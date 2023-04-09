@@ -12,6 +12,8 @@ import {
 import { useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -25,6 +27,7 @@ interface ProfilePageProps {
 const ProfilePage = memo(({ className }: ProfilePageProps) => {
   const { t } = useTranslation('profile');
   const dispatch = useAppDispatch();
+  const { id } = useParams<{ id: string }>();
   const validateErrors = useSelector(getProfileValidateErrors);
 
   const validateErrorTranslates = {
@@ -34,11 +37,11 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
     [ValidateProfileError.NO_DATA]: t('Данный не указаны'),
   };
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData());
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id));
     }
-  }, [dispatch]);
+  });
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

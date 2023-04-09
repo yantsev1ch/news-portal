@@ -102,6 +102,54 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "id": "4",
+      "text": "some comment 4",
+      "articleId": "1",
+      "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "privet",
+      "id": "_btKT1M"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "poke",
+      "id": "iQ3AS1N"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "poke",
+      "id": "tqow6Ak"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "hi",
+      "id": "4LgSVry"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "privetiki",
+      "id": "3sTJhEY"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "omg",
+      "id": "p-gs9Yl"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "2222",
+      "id": "m6-_N-2"
     }
   ],
   "users": [
@@ -117,17 +165,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
+      "avatar": "https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/99/UP5641-CUSA16631_00-AV00000000000012/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
     }
   ],
-  "profile": {
-    "first": "Andrey",
-    "lastname": "Yantsevich",
-    "age": 30,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Minsk",
-    "username": "admin",
-    "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Andrey",
+      "lastname": "Yantsevich",
+      "age": 30,
+      "currency": "BYN",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "admin",
+      "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
+    },
+    {
+      "id": "2",
+      "first": "adv",
+      "lastname": "yan",
+      "age": 30,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/99/UP5641-CUSA16631_00-AV00000000000012/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+    }
+  ]
 }
