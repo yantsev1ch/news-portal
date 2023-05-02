@@ -15,7 +15,7 @@ describe('initArticlesPage.test', () => {
       },
     });
 
-    await thunk.callThunk();
+    await thunk.callThunk({} as URLSearchParams);
 
     expect(thunk.dispatch).toBeCalledTimes(4);
   });
@@ -33,7 +33,7 @@ describe('initArticlesPage.test', () => {
       },
     });
 
-    await thunk.callThunk();
+    await thunk.callThunk({} as URLSearchParams);
 
     expect(thunk.dispatch).toBeCalledTimes(2);
   });
