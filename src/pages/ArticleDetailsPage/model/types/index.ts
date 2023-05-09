@@ -1,5 +1,4 @@
-import { ArticleDetailsPageCommentsSchema } from '../types/articleDetailsPageCommentsSchema';
-import { ArticleDetailsPageRecommendationsSchema } from '../types/articleDetailsPageRecommendationsSchema';
+import { ArticleDetailsPageCommentsSchema, ArticleDetailsPageRecommendationsSchema } from 'pages/ArticleDetailsPage';
 
 export interface ArticleDetailsPageSchema {
     comments: ArticleDetailsPageCommentsSchema;
