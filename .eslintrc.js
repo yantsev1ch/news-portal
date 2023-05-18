@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'yantsev1ch-plugin'],
   rules: {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
@@ -45,6 +45,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'yantsev1ch-plugin/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
