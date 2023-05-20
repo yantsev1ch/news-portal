@@ -13,14 +13,23 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'yantsev1ch-plugin'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'yantsev1ch-plugin',
+  ],
   rules: {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
-    'react/jsx-filename-extension': [2, {
-      extensions: ['.js', '.jsx', '.tsx'],
-    }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.tsx'],
+      },
+    ],
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
@@ -29,15 +38,30 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', {
-      markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to', 'target', 'src'],
-    }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: [
+          'data-testid',
+          'to',
+          'target',
+          'src',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+        ],
+      },
+    ],
     'linebreak-style': 0,
-    'max-len': ['error', {
-      ignoreComments: true,
-      code: 150,
-    }],
+    'max-len': [
+      'error',
+      {
+        ignoreComments: true,
+        code: 150,
+      },
+    ],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react-hooks/rules-of-hooks': 'error',
@@ -52,11 +76,13 @@ module.exports = {
     __API__: true,
     __PROJECT__: true,
   },
-  overrides: [{
-    files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-    rules: {
-      'i18next/no-literal-string': 'off',
-      'max-len': 'off',
+  overrides: [
+    {
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off',
+      },
     },
-  }],
+  ],
 };

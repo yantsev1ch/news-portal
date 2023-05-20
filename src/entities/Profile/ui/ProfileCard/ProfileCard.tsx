@@ -8,22 +8,23 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country } from 'entities/Country/model/types/country';
 import { CountrySelect } from 'entities/Country';
+import { HStack, VStack } from 'shared/ui/Stack';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
-    className?: string;
-    data?: Profile;
-    isLoading?: boolean;
-    error?: string;
-    readonly?: boolean;
-    onChangeFirstname?: (value?: string) => void;
-    onChangeLastname?: (value?: string) => void;
-    onChangeAge?: (value?: string) => void;
-    onChangeCity?: (value?: string) => void;
-    onChangeUsername?: (value?: string) => void;
-    onChangeAvatar?: (value?: string) => void;
-    onChangeCurrency?: (currency: Currency) => void;
-    onChangeCountry?: (country: Country) => void;
+  className?: string;
+  data?: Profile;
+  isLoading?: boolean;
+  error?: string;
+  readonly?: boolean;
+  onChangeFirstname?: (value?: string) => void;
+  onChangeLastname?: (value?: string) => void;
+  onChangeAge?: (value?: string) => void;
+  onChangeCity?: (value?: string) => void;
+  onChangeUsername?: (value?: string) => void;
+  onChangeAvatar?: (value?: string) => void;
+  onChangeCurrency?: (currency: Currency) => void;
+  onChangeCountry?: (country: Country) => void;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -47,22 +48,32 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+      <HStack
+        justify="center"
+        fullWidth
+        className={classNames(cls.ProfileCard, { [cls.loading]: true }, [
+          className,
+        ])}
+      >
         <Loader />
-      </div>
+      </HStack>
     );
   }
 
   if (error) {
     return (
-      <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+      <HStack
+        justify="center"
+        fullWidth
+        className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+      >
         <Text
           theme={TextTheme.ERROR}
           align={TextAlign.CENTER}
           title={t('Произошла ошибка')}
           text={t('Попробуйте перезагрузить страницу')}
         />
-      </div>
+      </HStack>
     );
   }
 
@@ -71,10 +82,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
   };
 
   return (
-    <div className={classNames(cls.ProfileCard, mods, [className])}>
-      {data?.avatar && (
-        <Avatar src={data?.avatar} size={150} />
-      )}
+    <VStack
+      fullWidth
+      gap="16"
+      className={classNames(cls.ProfileCard, mods, [className])}
+    >
+      {data?.avatar && <Avatar src={data?.avatar} size={150} />}
       <Input
         onChange={onChangeFirstname}
         className={cls.input}
@@ -130,6 +143,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
         readonly={readonly}
         className={cls.input}
       />
-    </div>
+    </VStack>
   );
 };
