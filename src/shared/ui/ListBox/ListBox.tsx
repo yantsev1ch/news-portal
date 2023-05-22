@@ -1,8 +1,7 @@
-import {
-  Fragment, memo, ReactNode, useState,
-} from 'react';
+import { Fragment, memo, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { DropdownDirection } from 'shared/types/ui';
 import { Button } from '../Button/Button';
 import { HStack } from '../Stack';
 import cls from './ListBox.module.scss';
@@ -13,8 +12,6 @@ export interface ListBoxItem {
   content: ReactNode;
   disabled?: boolean;
 }
-
-type DropdownDirection = 'top' | 'bottom';
 
 interface ListBoxProps {
   items?: ListBoxItem[];
@@ -35,7 +32,7 @@ export const ListBox = memo((props: ListBoxProps) => {
     items,
     defaultValue,
     readonly,
-    direction = 'bottom',
+    direction = 'bottom-right',
     label,
   } = props;
 
@@ -44,9 +41,7 @@ export const ListBox = memo((props: ListBoxProps) => {
   return (
     <HStack gap="4">
       {label && (
-        <span
-          className={classNames('', { [cls.disabled]: readonly })}
-        >
+        <span className={classNames('', { [cls.disabled]: readonly })}>
           {`${label}>`}
         </span>
       )}
