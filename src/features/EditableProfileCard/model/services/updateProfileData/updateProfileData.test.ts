@@ -1,8 +1,9 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Profile } from 'entities/Profile';
 import { updateProfileData } from './updateProfileData';
-import { Profile, ValidateProfileError } from '../../types/profile';
+import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 
 const profileData: Profile = {
   username: 'admin',
@@ -39,9 +40,7 @@ describe('updateProfileData.test', () => {
     const result = await thunk.callThunk();
 
     expect(result.meta.requestStatus).toBe('rejected');
-    expect(result.payload).toEqual([
-      ValidateProfileError.SERVER_ERROR,
-    ]);
+    expect(result.payload).toEqual([ValidateProfileError.SERVER_ERROR]);
   });
 
   test('validate error', async () => {
@@ -56,8 +55,6 @@ describe('updateProfileData.test', () => {
     const result = await thunk.callThunk();
 
     expect(result.meta.requestStatus).toBe('rejected');
-    expect(result.payload).toEqual([
-      ValidateProfileError.INCORRECT_USER_DATA,
-    ]);
+    expect(result.payload).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
   });
 });

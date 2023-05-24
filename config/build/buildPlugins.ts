@@ -7,7 +7,10 @@ import CopyPlugin from 'copy-webpack-plugin';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({
-  paths, isDev, apiUrl, project,
+  paths,
+  isDev,
+  apiUrl,
+  project,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
     new HtmlWebpackPlugin({
@@ -25,17 +28,22 @@ export function buildPlugins({
     }),
     new CopyPlugin({
       patterns: [
-        { from: paths.locales, to: paths.buildLocales },
+        {
+          from: paths.locales,
+          to: paths.buildLocales,
+        },
       ],
     }),
   ];
 
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
-    plugins.push(new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }));
     plugins.push(new ReactRefreshWebpackPlugin());
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      }),
+    );
   }
 
   return plugins;

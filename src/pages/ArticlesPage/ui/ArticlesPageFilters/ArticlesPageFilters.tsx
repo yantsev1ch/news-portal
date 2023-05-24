@@ -15,7 +15,6 @@ import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem } from 'shared/ui/Tabs/Tabs';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slice/articlesPageSlice';
 import {
@@ -28,7 +27,7 @@ import {
 import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {
-    className?: string;
+  className?: string;
 }
 
 export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
@@ -47,33 +46,48 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
   const debouncedFetchData = useDebounce(fetchData, 500);
 
-  const onChangeView = useCallback((view: ArticleView) => {
-    dispatch(articlesPageActions.setView(view));
-  }, [dispatch]);
+  const onChangeView = useCallback(
+    (view: ArticleView) => {
+      dispatch(articlesPageActions.setView(view));
+    },
+    [dispatch],
+  );
 
-  const onChangeSort = useCallback((sort: ArticleSortField) => {
-    dispatch(articlesPageActions.setSort(sort));
-    dispatch(articlesPageActions.setPage(1));
-    fetchData();
-  }, [dispatch, fetchData]);
+  const onChangeSort = useCallback(
+    (sort: ArticleSortField) => {
+      dispatch(articlesPageActions.setSort(sort));
+      dispatch(articlesPageActions.setPage(1));
+      fetchData();
+    },
+    [dispatch, fetchData],
+  );
 
-  const onChangeOrder = useCallback((order: SortOrder) => {
-    dispatch(articlesPageActions.setOrder(order));
-    dispatch(articlesPageActions.setPage(1));
-    fetchData();
-  }, [dispatch, fetchData]);
+  const onChangeOrder = useCallback(
+    (order: SortOrder) => {
+      dispatch(articlesPageActions.setOrder(order));
+      dispatch(articlesPageActions.setPage(1));
+      fetchData();
+    },
+    [dispatch, fetchData],
+  );
 
-  const onChangeSearch = useCallback((search: string) => {
-    dispatch(articlesPageActions.setSearch(search));
-    dispatch(articlesPageActions.setPage(1));
-    debouncedFetchData();
-  }, [dispatch, debouncedFetchData]);
+  const onChangeSearch = useCallback(
+    (search: string) => {
+      dispatch(articlesPageActions.setSearch(search));
+      dispatch(articlesPageActions.setPage(1));
+      debouncedFetchData();
+    },
+    [dispatch, debouncedFetchData],
+  );
 
-  const onChangeType = useCallback((type: ArticleType) => {
-    dispatch(articlesPageActions.setType(type));
-    dispatch(articlesPageActions.setPage(1));
-    fetchData();
-  }, [dispatch, fetchData]);
+  const onChangeType = useCallback(
+    (type: ArticleType) => {
+      dispatch(articlesPageActions.setType(type));
+      dispatch(articlesPageActions.setPage(1));
+      fetchData();
+    },
+    [dispatch, fetchData],
+  );
 
   return (
     <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
@@ -84,10 +98,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
           onChangeSort={onChangeSort}
           onChangeOrder={onChangeOrder}
         />
-        <ArticleViewSelector
-          view={view}
-          onViewClick={onChangeView}
-        />
+        <ArticleViewSelector view={view} onViewClick={onChangeView} />
       </div>
       <Card className={cls.search}>
         <Input

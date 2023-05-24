@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { ValidateProfileError } from '../../types/profile';
+import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 import { getProfileValidateErrors } from './getProfileValidateErrors';
 
 describe('getProfileValidateErrors', () => {
@@ -9,7 +9,9 @@ describe('getProfileValidateErrors', () => {
         validateError: [ValidateProfileError.INCORRECT_USER_DATA],
       },
     };
-    expect(getProfileValidateErrors(state as StateSchema)).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
+    expect(getProfileValidateErrors(state as StateSchema)).toEqual([
+      ValidateProfileError.INCORRECT_USER_DATA,
+    ]);
   });
 
   test('should work with empty state', () => {
