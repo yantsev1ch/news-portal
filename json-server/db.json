@@ -596,15 +596,28 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/99/UP5641-CUSA16631_00-AV00000000000012/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://previews.123rf.com/images/tomozina/tomozina1611/tomozina161100032/67964735-businessman-vector-avatar-profile-manager-clerk-consultant-handsome-young-brunette-man-in-white.jpg"
     }
   ],
   "profile": [
