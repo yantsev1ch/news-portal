@@ -15,7 +15,7 @@ import { addCommentForArticle } from '../../model/services/addCommentForArticle/
 
 interface ArticleDetailsCommentsProps {
   className?: string;
-  id: string;
+  id?: string;
 }
 
 export const ArticleDetailsComments = memo(
@@ -40,7 +40,9 @@ export const ArticleDetailsComments = memo(
     return (
       <VStack gap="16" fullWidth className={classNames('', {}, [className])}>
         <Text size={TextSize.L} title={t('Комментарии')} />
+        {/* <Suspense fallback="Идет загрузка"> */}
         <AddCommentForm onSendComment={onSendComment} />
+        {/* </Suspense> */}
         <CommentsList comments={comments} isLoading={commentsIsLoading} />
       </VStack>
     );

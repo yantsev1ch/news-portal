@@ -13,7 +13,6 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Country } from 'entities/Country';
 import { VStack } from 'shared/ui/Stack';
-import { useParams } from 'react-router-dom';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
@@ -26,6 +25,7 @@ import { fetchProfileData } from '../../model/services/fetchProfileData/fetchPro
 
 interface EditableProfileCardProps {
   className?: string;
+  id?: string;
 }
 
 const reducers: ReducersList = {
@@ -33,7 +33,7 @@ const reducers: ReducersList = {
 };
 
 export const EditableProfileCard = (props: EditableProfileCardProps) => {
-  const { className } = props;
+  const { className, id } = props;
   const dispatch = useAppDispatch();
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
@@ -41,7 +41,6 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
   const readonly = useSelector(getProfileReadonly);
   const { t } = useTranslation('profile');
   const validateErrors = useSelector(getProfileValidateErrors);
-  const { id } = useParams<{ id: string }>();
 
   const validateErrorTranslates = {
     [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
