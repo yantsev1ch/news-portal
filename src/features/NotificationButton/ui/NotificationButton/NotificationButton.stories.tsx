@@ -1,18 +1,25 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { HStack } from 'shared/ui/Stack';
+import withMock from 'storybook-addon-mock';
 import { NotificationButton } from './NotificationButton';
 
 export default {
-  title: 'shared/NotificationButton',
+  title: 'features/NotificationButton',
   component: NotificationButton,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [withMock],
 } as ComponentMeta<typeof NotificationButton>;
 
 const Template: ComponentStory<typeof NotificationButton> = (args) => (
-  <NotificationButton {...args} />
+  <HStack justify="end">
+    <NotificationButton {...args} />
+  </HStack>
 );
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [StoreDecorator({})];
