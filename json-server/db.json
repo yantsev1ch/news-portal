@@ -1,13 +1,35 @@
 {
-  "posts": [
+  "notifications": [
     {
       "id": "1",
-      "title": "json-server",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
       "userId": "1"
     },
     {
       "id": "2",
-      "title": "json-server",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
       "userId": "2"
     }
   ],
@@ -88,7 +110,7 @@
       "id": "2",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
+      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
       "views": 5204,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -136,7 +158,7 @@
       "id": "4",
       "title": "Scala news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://w7.pngwing.com/pngs/875/194/png-transparent-scala-apache-spark-apache-hadoop-stream-big-data-scala-class-text-rectangle-thumbnail.png",
+      "img": "https://coursefreedl.com/wp-content/uploads/2020/01/Scala-Zero-To-Hero-Complete-Guide.jpg",
       "views": 10222,
       "createdAt": "24.01.2022",
       "userId": "1",
@@ -160,7 +182,7 @@
       "id": "5",
       "title": "Golang news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png",
+      "img": "https://cdn-front.kwork.ru/pics/t3/88/16350941-1630390388.jpg",
       "views": 10222,
       "createdAt": "26.02.2020",
       "userId": "1",
@@ -280,7 +302,7 @@
       "id": "10",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
+      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -328,7 +350,7 @@
       "id": "12",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
+      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -376,7 +398,7 @@
       "id": "14",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
+      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -424,7 +446,7 @@
       "id": "16",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
+      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -537,64 +559,142 @@
       "userId": "1"
     },
     {
-      "id": "4",
-      "text": "some comment 4",
       "articleId": "1",
-      "userId": "2"
+      "userId": "1",
+      "text": "123",
+      "id": "4Cljjzl"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123asfasf",
+      "id": "AEM4Dvc"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123asfasf",
+      "id": "IFEOWl0"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "привет мир",
+      "id": "dBacYRZ"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "хехехехе",
+      "id": "rBX_C-e"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "фыафыа",
+      "id": "5k0ApX-"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdfsdfsd",
+      "id": "w-HDIRq"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asdasdasd",
+      "id": "MVvGQoZ"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "comment 1",
+      "id": "bAs7YBE"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "python!!!",
+      "id": "p5rMadd"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "123213",
+      "id": "Zu_RNuF"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "dfdsf",
+      "id": "4rFHQgJ"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "sdfsdf",
+      "id": "yYEdTI-"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "123213",
+      "id": "TR1yDY6"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "112",
+      "id": "wSAhqy5"
+    },
+    {
+      "articleId": "18",
+      "userId": "1",
+      "text": "12",
+      "id": "r6b1z-N"
+    },
+    {
+      "articleId": "18",
+      "userId": "2",
+      "text": "привет",
+      "id": "DENfTu6"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "33",
+      "id": "Ps59wrg"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "123",
+      "id": "zzYVth3"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "123",
+      "id": "WjF4c_d"
     },
     {
       "articleId": "1",
       "userId": "2",
       "text": "privet",
-      "id": "_btKT1M"
+      "id": "fta748h"
     },
     {
-      "articleId": "1",
+      "articleId": "2",
       "userId": "2",
-      "text": "poke",
-      "id": "iQ3AS1N"
+      "text": "питон топ",
+      "id": "ZlmlUrg"
     },
     {
-      "articleId": "1",
-      "userId": "2",
-      "text": "poke",
-      "id": "tqow6Ak"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "hi",
-      "id": "4LgSVry"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "privetiki",
-      "id": "3sTJhEY"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "omg",
-      "id": "p-gs9Yl"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "2222",
-      "id": "m6-_N-2"
-    },
-    {
-      "articleId": "1",
+      "articleId": "7",
       "userId": "1",
-      "text": "COMMENT",
-      "id": "R_v3u5z"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "comment",
-      "id": "jT4v92q"
+      "text": "123",
+      "id": "KmtWJR_"
     }
   ],
   "users": [
@@ -605,7 +705,7 @@
       "roles": [
         "ADMIN"
       ],
-      "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
+      "avatar": "https://yakutsk.ru/wp-content/uploads/2022/07/12/bystrov_haker.jpeg"
     },
     {
       "id": "2",
@@ -614,7 +714,7 @@
       "roles": [
         "USER"
       ],
-      "avatar": "https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/99/UP5641-CUSA16631_00-AV00000000000012/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
       "id": "3",
@@ -623,31 +723,31 @@
       "roles": [
         "MANAGER"
       ],
-      "avatar": "https://previews.123rf.com/images/tomozina/tomozina1611/tomozina161100032/67964735-businessman-vector-avatar-profile-manager-clerk-consultant-handsome-young-brunette-man-in-white.jpg"
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
   "profile": [
     {
       "id": "1",
-      "first": "Andrey",
-      "lastname": "Y",
-      "age": 30,
-      "currency": "BYN",
+      "first": "timur",
+      "lastname": "ulbi",
+      "age": 465,
+      "currency": "RUB",
       "country": "Belarus",
-      "city": "Minsk",
-      "username": "admin",
-      "avatar": "https://www.shutterstock.com/image-vector/programmer-computer-expert-black-linear-260nw-2033137370.jpg"
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://yt3.ggpht.com/ytc/AKedOLTYUJxG8Hu036PQ_TXpMLq2fG8Kj8NZI4h0lbn_3g=s900-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "2",
-      "first": "adv",
-      "lastname": "yan",
-      "age": 30,
-      "currency": "RUB",
-      "country": "Russia",
+      "first": "ulbi tv",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "EUR",
+      "country": "Ukraine",
       "city": "Moscow",
-      "username": "user",
-      "avatar": "https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/99/UP5641-CUSA16631_00-AV00000000000012/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+      "username": "ulbi tv",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ]
 }

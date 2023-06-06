@@ -1,0 +1,40 @@
+.Popups {
+  position: relative;
+}
+
+.top-right {
+  bottom: 100%;
+  left: 0;
+}
+
+.top-left {
+  bottom: 100%;
+  right: 0;
+}
+
+.bottom-right {
+  top: 100%;
+  left: 0;
+}
+
+.bottom-left {
+  top: 100%;
+  right: 0;
+}
+
+.active {
+  background: var(--inverted-primary-color);
+}
+
+.disabled {
+  opacity: 0.7;
+}
+
+.trigger {
+  background: none;
+  outline-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}

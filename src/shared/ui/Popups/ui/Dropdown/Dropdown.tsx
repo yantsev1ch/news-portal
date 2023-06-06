@@ -2,8 +2,9 @@ import { Menu } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Fragment, memo, ReactNode } from 'react';
 import { DropdownDirection } from 'shared/types/ui';
-import { AppLink } from '../AppLink/AppLink';
+import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
+import popupsCls from '../../styles/Popups.module.scss';
 
 export interface DropdownItem {
   disabled?: boolean;
@@ -24,19 +25,26 @@ export const Dropdown = memo((props: DropdownProps) => {
     className, items, trigger, direction = 'bottom-right',
   } = props;
 
-  const dropdownClasses = [cls[direction]];
+  const optionsClasses = [popupsCls[direction]];
 
   return (
-    <Menu as="div" className={classNames(cls.Dropdown, {}, [className])}>
-      <Menu.Button className={cls.btn}>{trigger}</Menu.Button>
-      <Menu.Items className={classNames(cls.menu, {}, dropdownClasses)}>
+    <Menu
+      as="div"
+      className={classNames(cls.Dropdown, {}, [className, popupsCls.Popups])}
+    >
+      <Menu.Button className={popupsCls.trigger}>{trigger}</Menu.Button>
+      <Menu.Items className={classNames(cls.menu, {}, optionsClasses)}>
         {items.map((item, index) => {
           const content = ({ active }: { active: boolean }) => (
             <button
               disabled={item.disabled}
               type="button"
               onClick={item.onClick}
-              className={classNames(cls.item, { [cls.active]: active }, [])}
+              className={classNames(
+                cls.item,
+                { [popupsCls.active]: active },
+                [],
+              )}
             >
               {item.content}
             </button>

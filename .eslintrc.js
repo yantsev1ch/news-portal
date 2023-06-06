@@ -49,6 +49,7 @@ module.exports = {
           'src',
           'justify',
           'align',
+          'border',
           'direction',
           'gap',
           'role',
