@@ -19,7 +19,9 @@ export const Modal = (props: ModalProps) => {
     className, children, isOpen, onClose, lazy,
   } = props;
 
-  const { close, isClosing, isMounted } = useModal({
+  const {
+    close, isClosing, isMounted, isRenderModal,
+  } = useModal({
     onClose,
     isOpen,
     animationDelay: 300,
@@ -28,7 +30,7 @@ export const Modal = (props: ModalProps) => {
   const { theme } = useTheme();
 
   const mods: Mods = {
-    [cls.opened]: isOpen,
+    [cls.opened]: isRenderModal,
     [cls.isClosing]: isClosing,
   };
 

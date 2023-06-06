@@ -17,13 +17,22 @@ export const useModal = (props: UseModalProps) => {
 
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isRenderModal, setIsRenderModal] = useState(false);
 
   const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
   useEffect(() => {
     if (isOpen) {
       setIsMounted(true);
+      timerRef.current = setTimeout(() => {
+        setIsRenderModal(true);
+      }, 7);
     }
+
+    return () => {
+      clearInterval(timerRef.current);
+      setIsRenderModal(false);
+    };
   }, [isOpen]);
 
   const close = useCallback(() => {
@@ -61,5 +70,6 @@ export const useModal = (props: UseModalProps) => {
     isClosing,
     isMounted,
     close,
+    isRenderModal,
   };
 };
