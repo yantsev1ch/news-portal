@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { HStack } from 'shared/ui/Stack';
-import { UserRole } from 'entities/User';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { HStack } from '@/shared/ui/Stack';
+import { UserRole } from '@/entities/User';
 import { AvatarDropdown } from './AvatarDropdown';
 
 export default {

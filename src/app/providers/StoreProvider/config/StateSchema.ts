@@ -1,5 +1,3 @@
-import { UserSchema } from 'entities/User';
-import { LoginSchema } from 'features/AuthByUsername';
 import {
   AnyAction,
   EnhancedStore,
@@ -8,13 +6,15 @@ import {
 } from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
-import { ArticleDetailsSchema } from 'entities/Article';
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
-import { AddCommentFormSchema } from 'features/AddCommentForm';
-import { ArticlesPageSchema } from 'pages/ArticlesPage';
-import { ScrollRestoreSchema } from 'features/ScrollRestore';
-import { rtkApi } from 'shared/api/rtkApi';
-import { ProfileSchema } from 'features/EditableProfileCard/model/types/editableProfileCardSchema';
+import { LoginSchema } from '@/features/AuthByUsername';
+import { UserSchema } from '@/entities/User';
+import { ArticleDetailsSchema } from '@/entities/Article';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
+import { AddCommentFormSchema } from '@/features/AddCommentForm';
+import { ArticlesPageSchema } from '@/pages/ArticlesPage';
+import { ScrollRestoreSchema } from '@/features/ScrollRestore';
+import { rtkApi } from '@/shared/api/rtkApi';
+import { ProfileSchema } from '@/features/EditableProfileCard/model/types/editableProfileCardSchema';
 
 export interface StateSchema {
   user: UserSchema;

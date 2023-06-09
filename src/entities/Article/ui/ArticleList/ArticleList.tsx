@@ -1,7 +1,7 @@
 import React, { HTMLAttributeAnchorTarget, memo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
 import { ArticleView } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
