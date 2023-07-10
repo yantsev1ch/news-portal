@@ -37,14 +37,20 @@ Normal.parameters = {
         {
           ...notification,
           id: '1',
+          title: 'Уведомление 1',
+          description: 'Описание 1',
         },
         {
           ...notification,
           id: '2',
+          title: 'Уведомление 2',
+          description: 'Описание 2',
         },
         {
           ...notification,
           id: '3',
+          title: 'Уведомление 3',
+          description: 'Описание 3',
         },
       ],
     },
