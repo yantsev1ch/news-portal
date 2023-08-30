@@ -2,10 +2,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page';
 
 interface ArticleEditPageProps {
-    className?: string;
+  className?: string;
 }
 
 const ArticleEditPage = memo((props: ArticleEditPageProps) => {
@@ -16,9 +16,7 @@ const ArticleEditPage = memo((props: ArticleEditPageProps) => {
 
   return (
     <Page className={classNames('', {}, [className])}>
-      {isEdit
-        ? t('Редактирование статьи с ID = ') + id
-        : t('Создание статьи')}
+      {isEdit ? t('Редактирование статьи с ID = ') + id : t('Создание статьи')}
     </Page>
   );
 });

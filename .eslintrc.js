@@ -23,7 +23,7 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'react/jsx-filename-extension': [
       2,
       {
@@ -76,6 +76,17 @@ module.exports = {
       'error',
       {
         alias: '@',
+      },
+    ],
+    'yantsev1ch-plugin/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.story.*',
+          '**/StoreDecorator.tsx',
+        ],
       },
     ],
   },

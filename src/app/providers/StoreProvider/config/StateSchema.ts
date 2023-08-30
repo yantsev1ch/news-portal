@@ -14,7 +14,7 @@ import { AddCommentFormSchema } from '@/features/AddCommentForm';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { ScrollRestoreSchema } from '@/features/ScrollRestore';
 import { rtkApi } from '@/shared/api/rtkApi';
-import { ProfileSchema } from '@/features/EditableProfileCard/model/types/editableProfileCardSchema';
+import { ProfileSchema } from '@/features/EditableProfileCard';
 
 export interface StateSchema {
   user: UserSchema;

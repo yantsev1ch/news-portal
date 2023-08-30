@@ -18,4 +18,5 @@ export {
   ArticleType,
   ArticleView,
   ArticleSortField,
+  ArticleBlockType,
 } from './model/consts/consts';

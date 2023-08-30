@@ -7,7 +7,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
@@ -25,7 +25,6 @@ const initialReducers: ReducersList = {
 };
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
-  const { t } = useTranslation('articles');
   const { id } = useParams<{ id: string }>();
 
   if (!id) {
