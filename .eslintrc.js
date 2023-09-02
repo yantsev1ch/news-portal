@@ -89,6 +89,13 @@ module.exports = {
         ],
       },
     ],
+    'yantsev1ch-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

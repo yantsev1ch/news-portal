@@ -3,12 +3,11 @@ import { useDispatch, useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
 import {
   ReduxStoreWithManager,
-  StateSchema,
   StateSchemaKey,
-} from '@/app/providers/StoreProvider/config/StateSchema';
+} from '@/app/providers/StoreProvider';
 
 export type ReducersList = {
-  [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>;
+  [name in StateSchemaKey]?: Reducer;
 };
 
 interface DynamicModuleLoaderProps {
