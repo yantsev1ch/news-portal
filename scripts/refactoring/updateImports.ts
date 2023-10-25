@@ -1,4 +1,5 @@
 import { Project } from 'ts-morph';
+import { PROJECT_LAYERS } from './consts';
 
 const project = new Project({});
 
@@ -8,8 +9,7 @@ project.addSourceFilesAtPaths('src/**/*.tsx');
 const files = project.getSourceFiles();
 
 function isAbsolute(value: string) {
-  const layers = ['app', 'shared', 'entities', 'features', 'widgets', 'pages'];
-  return layers.some((layer) => value.startsWith(layer));
+  return PROJECT_LAYERS.some((layer) => value.startsWith(layer));
 }
 
 files.forEach((sourceFile) => {
