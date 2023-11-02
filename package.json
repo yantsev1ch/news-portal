@@ -86,6 +86,7 @@
     "jest": "^27.5.1",
     "jest-html-reporters": "^3.1.4",
     "json-server": "^0.17.0",
+    "lint-staged": "^15.0.2",
     "loki": "^0.31.0",
     "mini-css-extract-plugin": "^2.5.3",
     "react-refresh": "^0.14.0",
@@ -138,5 +139,8 @@
         "preset": "iPhone 7"
       }
     }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint"
   }
 }
