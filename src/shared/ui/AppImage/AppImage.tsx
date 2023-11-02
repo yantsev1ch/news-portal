@@ -2,7 +2,6 @@ import {
   ImgHTMLAttributes,
   memo,
   ReactElement,
-  ReactNode,
   useLayoutEffect,
   useState,
 } from 'react';

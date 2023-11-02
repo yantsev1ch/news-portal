@@ -26,7 +26,8 @@ export default {
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-    '^@/(.*)$': '<rootDir>src/$1',
+    // '^@/(.*)$': '<rootDir>src/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   reporters: [
     'default',
@@ -35,7 +36,7 @@ export default {
       {
         publicPath: '<rootDir>/reports/unit',
         filename: 'report.html',
-        openReport: true,
+        // openReport: true,
         inlineSource: true,
       },
     ],
