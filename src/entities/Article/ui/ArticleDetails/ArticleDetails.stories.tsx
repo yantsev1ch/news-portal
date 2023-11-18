@@ -103,11 +103,6 @@ Normal.decorators = [
 
 export const Loading = Template.bind({});
 Loading.args = {};
-Loading.story = {
-  parameters: {
-    loki: { skip: true },
-  },
-};
 Loading.decorators = [
   StoreDecorator({
     articleDetails: {
