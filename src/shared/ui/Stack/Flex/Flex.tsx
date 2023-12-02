@@ -56,6 +56,7 @@ export const Flex = (props: FlexProps) => {
     align = 'center',
     gap,
     fullWidth,
+    ...otherProps
   } = props;
 
   const classes = [
@@ -70,5 +71,9 @@ export const Flex = (props: FlexProps) => {
     [cls.fullWidth]: fullWidth,
   };
 
-  return <div className={classNames(cls.Flex, mods, classes)}>{children}</div>;
+  return (
+    <div className={classNames(cls.Flex, mods, classes)} {...otherProps}>
+      {children}
+    </div>
+  );
 };
