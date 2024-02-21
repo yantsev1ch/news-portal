@@ -8,6 +8,11 @@ describe('Пользователь заходит на страницу со с�
     cy.getByTestId('ArticleList').should('exist');
     cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3);
   });
+  it('и статьи успешно подгружаются на стабах(фикстурах)', () => {
+    cy.intercept('GET', '**/articles?*', { fixture: 'articles.json' });
+    cy.getByTestId('ArticleList').should('exist');
+    cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3);
+  });
   it('и статьи успешно сортируются по названию и возрастанию', () => {
     cy.sortArticles('title', 'asc');
     cy.getByTestId('ArticlesPage.SortSelect').should('have.value', 'title');
@@ -22,5 +27,8 @@ describe('Пользователь заходит на страницу со с�
     cy.findArticle('Kotlin');
     cy.getByTestId('ArticlesPage.Search').should('have.value', 'Kotlin');
     cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 1);
+  });
+  it.skip('сломаный тест который скипается', () => {
+    cy.get('error').should('exist');
   });
 });

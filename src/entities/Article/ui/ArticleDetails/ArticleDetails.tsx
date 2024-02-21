@@ -1,32 +1,32 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
+import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar';
-import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
-import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Icon } from '@/shared/ui/Icon';
+import { Skeleton } from '@/shared/ui/Skeleton';
 import { HStack, VStack } from '@/shared/ui/Stack';
+import { Text, TextAlign } from '@/shared/ui/Text';
 import { ArticleBlockType } from '../../model/consts/consts';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
-import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
-import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import cls from './ArticleDetails.module.scss';
 import {
   getArticleDetailsData,
   getArticleDetailsError,
   getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { ArticleBlock } from '../../model/types/article';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import cls from './ArticleDetails.module.scss';
 
 interface ArticleDetailsProps {
   className?: string;
@@ -72,12 +72,12 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
           className={cls.avatar}
           width={200}
           height={200}
-          border="50%"
+          border='50%'
         />
         <Skeleton width={300} height={32} />
         <Skeleton width={600} height={64} />
-        <Skeleton width="100%" height={200} />
-        <Skeleton width="100%" height={200} />
+        <Skeleton width='100%' height={200} />
+        <Skeleton width='100%' height={200} />
       </>
     );
   } else if (error) {
@@ -90,16 +90,16 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   } else {
     content = (
       <>
-        <HStack justify="center" fullWidth>
+        <HStack justify='center' fullWidth>
           <Avatar size={200} src={article?.img} className={cls.avatar} />
         </HStack>
-        <VStack gap="4" fullWidth data-testid="ArticleDetails.Info">
+        <VStack gap='4' fullWidth data-testid='ArticleDetails.Info'>
           <Text title={article?.title} text={article?.subtitle} />
-          <HStack gap="8">
+          <HStack gap='8'>
             <Icon Svg={EyeIcon} />
             <Text text={String(article?.views)} />
           </HStack>
-          <HStack gap="8">
+          <HStack gap='8'>
             <Icon Svg={CalendarIcon} />
             <Text text={article?.createdAt} />
           </HStack>
@@ -112,7 +112,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
       <VStack
-        gap="16"
+        gap='16'
         fullWidth
         className={classNames(cls.ArticleDetails, {}, [className])}
       >

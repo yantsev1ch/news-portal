@@ -22,6 +22,7 @@ module.exports = {
   ],
   rules: {
     'import/no-unresolved': 'off',
+    'jsx-quotes': [2, 'prefer-single'],
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',
     'react/jsx-filename-extension': [
