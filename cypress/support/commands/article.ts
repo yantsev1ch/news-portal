@@ -20,20 +20,22 @@ export const findArticle = (value: string) => {
   cy.getByTestId('ArticlesPage.Search').type(value);
 };
 
-export const createArticle = (article?: Article) => cy
-  .request({
-    method: 'POST',
-    url: 'http://localhost:8000/articles',
-    headers: { Authorization: 'asdasd' },
-    body: article ?? defaultArticle,
-  })
-  .then((resp) => resp.body);
+export const createArticle = (article?: Article) =>
+  cy
+    .request({
+      method: 'POST',
+      url: 'http://localhost:8000/articles',
+      headers: { Authorization: 'asdasd' },
+      body: article ?? defaultArticle,
+    })
+    .then((resp) => resp.body);
 
-export const removeArticle = (articleId: string) => cy.request({
-  method: 'DELETE',
-  url: `http://localhost:8000/articles/${articleId}`,
-  headers: { Authorization: 'asdasd' },
-});
+export const removeArticle = (articleId: string) =>
+  cy.request({
+    method: 'DELETE',
+    url: `http://localhost:8000/articles/${articleId}`,
+    headers: { Authorization: 'asdasd' },
+  });
 
 declare global {
   namespace Cypress {

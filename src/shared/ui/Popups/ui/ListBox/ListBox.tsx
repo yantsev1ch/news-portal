@@ -42,7 +42,11 @@ export const ListBox = memo((props: ListBoxProps) => {
   return (
     <HStack gap="4">
       {label && (
-        <span className={classNames('', { [popupsCls.disabled]: readonly })}>
+        <span
+          className={classNames('', {
+            [popupsCls.disabled]: readonly,
+          })}
+        >
           {`${label}>`}
         </span>
       )}

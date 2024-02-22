@@ -1,6 +1,4 @@
-import React, {
-  memo, ReactNode, useCallback, useEffect,
-} from 'react';
+import React, { memo, ReactNode, useCallback, useEffect } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   AnimationProvider,
@@ -25,9 +23,7 @@ const DrawerContent = memo((props: DrawerProps) => {
   const { Spring, Gesture } = useAnimationLibs();
   const [{ y }, api] = Spring.useSpring(() => ({ y: height }));
   const { theme } = useTheme();
-  const {
-    className, children, onClose, isOpen, lazy,
-  } = props;
+  const { className, children, onClose, isOpen, lazy } = props;
 
   const openDrawer = useCallback(() => {
     api.start({

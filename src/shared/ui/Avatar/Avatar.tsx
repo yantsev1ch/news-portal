@@ -15,9 +15,7 @@ interface AvatarProps {
 }
 
 export const Avatar = (props: AvatarProps) => {
-  const {
-    className, src, alt, size = 100, fallbackInverted,
-  } = props;
+  const { className, src, alt, size = 100, fallbackInverted } = props;
 
   const mods: Mods = {};
 

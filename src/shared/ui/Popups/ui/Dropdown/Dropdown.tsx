@@ -21,9 +21,7 @@ interface DropdownProps {
 }
 
 export const Dropdown = memo((props: DropdownProps) => {
-  const {
-    className, items, trigger, direction = 'bottom-right',
-  } = props;
+  const { className, items, trigger, direction = 'bottom-right' } = props;
 
   const optionsClasses = [popupsCls[direction]];
 

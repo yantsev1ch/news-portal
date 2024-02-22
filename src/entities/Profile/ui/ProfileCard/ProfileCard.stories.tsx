@@ -10,11 +10,16 @@ export default {
   },
 } as ComponentMeta<typeof ProfileCard>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
+const Template: ComponentStory<typeof ProfileCard> = (args) => (
+  <ProfileCard {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
-  data: { avatar: 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper.png' },
+  data: {
+    avatar:
+      'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper.png',
+  },
 };
 
 export const Error = Template.bind({});
@@ -30,5 +35,8 @@ Loading.args = {
 export const Readonly = Template.bind({});
 Readonly.args = {
   readonly: true,
-  data: { avatar: 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper.png' },
+  data: {
+    avatar:
+      'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper.png',
+  },
 };
